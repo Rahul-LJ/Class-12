@@ -14,8 +14,8 @@ NOT opposites
 membership - in, not in
 identity - is, is not
 
-            MUTABLE                  IMMUTABLE
-                |                        |
+            MUTABLE                          IMMUTABLE
+                |                                |
       ____________________            _________________________
       |                  |           |       |       |        |    
     list            dictionary      int    string  tuple   boolean
