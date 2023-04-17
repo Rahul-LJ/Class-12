@@ -5,7 +5,16 @@ tokens-Punctuators Identifiers Constant Keyword Operators
 
 escape sequence- \n (next line) \a (bell sound) () \t (tab space)
 
-priority ig ** // % / * + -
+priority for operators
+__________________________________________________
+|            ()             |         bracket     |
+|            **             |        exponents    |
+|         * / // %          |      multi and divi |    the ones is same level, should be done
+| < > <= >= != == is is not |      comparisions   |       left to right in the sum
+|             not           |       boolean not   |
+|             and           |       boolean and   |
+|             or            |       boolean or    |
+|_________________________________________________|
 
 AND both to be true
 OR either of one be true
