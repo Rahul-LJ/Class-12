@@ -38,6 +38,7 @@ pass - does nothing
 
 string function
 slicing    - [start,stop,step]
+length     - len()                    returns the length of the string
 capitalize - x.capitalise()           caps the first letter of the string
 title      - x.title()                caps every first letter of words
 upper,lower- x.upper()                caps the entire string
@@ -45,18 +46,40 @@ count      - x.count('')              counts the given character
 find       - x.find('',start)         prints the index value of the chr
 split      - x.split('')              splits the string wherever the chr appears
 partition  - x.partition('')          splits 3 parts, 1)before 2)the chr 3)after
-replace    - x.replace(old,new,count)
+replace    - x.replace(old,new,count) replaces the old string with new given times
 
 list function
 eval       - eval('')                 takes one input which is a str, evaluates
-append     - l.append()               1 argument, adds as last element in list
-extend     - l.extend()               1 argument, a variable (for multi values)
-pop        - l.pop()                  default-last element, removes given index
-remove     - l.remove()               1 argument, removes given Value
-clear      - l.clear()                removes all elements, list still exist
+length     - len()                    returns the length of the list
+min & max  - min() max()              returns maximum/minimum value from the list
+append     - x.append()               1 argument, adds as last element in list
+extend     - x.extend()               1 argument, a variable (for multi values)
+pop        - x.pop()                  default-last element, removes given index
+remove     - x.remove()               1 argument, removes given Value
+clear      - x.clear()                removes all elements, list still exist
 count      - x.count('')              counts the given character
-sort       - x.sort()                 no argument, increasing order
-reverse    - x.reverse()              no argument, decreasing order
+sort       - x.sort()                 no argument, increase or decrease-> x.sort(reverse=True)
+reverse    - x.reverse()              no argument, reverses the list
+
+tuple function
+tuple      - tuple()                  change data type to tuple
+length     - len()                    returns the length of the tuple
+min & max  - min() max()              returns maximum/minimum value from the tuple
+index      - x.index()                1 argument, elements, returns its index value
+count      - x.count('')              counts the given character
+delete     - del(x)                   deletes the entire tuple from memory
+
+dictionary function
+assigning  - x[<key>]=<value>         used to add elements (key value pair) in a dictionary
+pop        - x.pop()                  1 argument, <key> removes and returns given key & its value
+clear      - x.clear()                removes all elements, dictionary still exist
+delete     - del x[<key>]             deletes the given key value, does not return
+get        - x.get()                  1 argument, <key> gets the value of that key
+items
+keys
+values
+update
+
 
 Matrix
 basically nested list
