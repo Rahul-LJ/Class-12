@@ -51,12 +51,15 @@ replace    - x.replace(old,new,count) replaces the old string with new given tim
 list function
 eval       - eval('')                 takes one input which is a str, evaluates
 length     - len()                    returns the length of the list
+index      - x.index()                1 argument, elements, returns its index value
 min & max  - min() max()              returns maximum/minimum value from the list
 append     - x.append()               1 argument, adds as last element in list
 extend     - x.extend()               1 argument, a variable (for multi values)
+insert     - x.insert(index,value)    2 arguments to add element, pushes the old to next index
 pop        - x.pop()                  default-last element, removes given index
 remove     - x.remove()               1 argument, removes given Value
 clear      - x.clear()                removes all elements, list still exist
+delete     - del(x)                   deletes the entire list from memory
 count      - x.count('')              counts the given character
 sort       - x.sort()                 no argument, increase or decrease-> x.sort(reverse=True)
 reverse    - x.reverse()              no argument, reverses the list
@@ -75,10 +78,12 @@ pop        - x.pop()                  1 argument, <key> removes and returns give
 clear      - x.clear()                removes all elements, dictionary still exist
 delete     - del x[<key>]             deletes the given key value, does not return
 get        - x.get()                  1 argument, <key> gets the value of that key
-items
-keys
-values
-update
+items      - x.items()                returns key value in tuple, and in a list as whole [(a,1),(b,1)]
+keys       - x.keys()                 returns all keys of the dictionary in a list
+values     - x.values()               returns all values of the dictionary in a list
+update     - x.update(<other dict>)   updates value if same keys, if not adds as a new element
+set defalt - dict.setdefault(,)       same as update, doesnt update if same keys, but adds
+fromkeys   - dict.fromkeys(,)         2 arguments, list/tuple of keys and list/tuple of values *variable
 
 
 Matrix
