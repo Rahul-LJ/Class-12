@@ -35,6 +35,7 @@ range - (start,stop,step)
 break - it breaks the loop (comes out of the loop)
 continue - it skips the current condition in a loop
 pass - does nothing
+______________________________________________________________________________
 
 string function
 slicing    - [start,stop,step]
@@ -47,7 +48,7 @@ find       - x.find('',start)         prints the index value of the chr
 split      - x.split('')              splits the string wherever the chr appears
 partition  - x.partition('')          splits 3 parts, 1)before 2)the chr 3)after
 replace    - x.replace(old,new,count) replaces the old string with new given times
-
+______________________________________________________________________________
 list function
 eval       - eval('')                 takes one input which is a str, evaluates
 length     - len()                    returns the length of the list
@@ -63,7 +64,7 @@ delete     - del(x)                   deletes the entire list from memory
 count      - x.count('')              counts the given character
 sort       - x.sort()                 no argument, increase or decrease-> x.sort(reverse=True)
 reverse    - x.reverse()              no argument, reverses the list
-
+______________________________________________________________________________
 tuple function
 tuple      - tuple()                  change data type to tuple
 length     - len()                    returns the length of the tuple
@@ -71,7 +72,7 @@ min & max  - min() max()              returns maximum/minimum value from the tup
 index      - x.index()                1 argument, elements, returns its index value
 count      - x.count('')              counts the given character
 delete     - del(x)                   deletes the entire tuple from memory
-
+______________________________________________________________________________
 dictionary function
 assigning  - x[<key>]=<value>         used to add elements (key value pair) in a dictionary
 pop        - x.pop()                  1 argument, <key> removes and returns given key & its value
@@ -84,7 +85,7 @@ values     - x.values()               returns all values of the dictionary in a 
 update     - x.update(<other dict>)   updates value if same keys, if not adds as a new element
 set defalt - dict.setdefault(,)       same as update, doesnt update if same keys, but adds
 fromkeys   - dict.fromkeys(,)         2 arguments, list/tuple of keys and list/tuple of values *variable
-
+______________________________________________________________________________
 
 Matrix
 basically nested list
@@ -110,4 +111,12 @@ rows i
 1 2 3
 4 5      if (i+j<=m-1):
 7
+______________________________________________________________________________
+
+Boolean algebra
+or  +    diagram arrow pointing right
+and .    diagram dome pointing right
+not      diagram a small triangle pointing right attatched to a small circle
+______________________________________________________________________________
+
 '''
