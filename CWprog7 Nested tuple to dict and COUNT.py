@@ -22,3 +22,5 @@ def count_tup(t):
 
 t=eval(input('Enter tuple: '))
 print(count_tup(t))
+
+'''Credits to @JEs-TAR for sloving this'''
