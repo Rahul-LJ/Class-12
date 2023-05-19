@@ -15,8 +15,8 @@ def primetuple(l,u):
     t=()
     for i in range(l,u+1):
         if prime(i)==True:
-            temp=(i,)
-            t=t+temp
+            temp=(i,)          #element saved as temp tuple
+            t=t+temp           #add element to tuple by concatenation
     print(t)
 
 primetuple(6,30)
