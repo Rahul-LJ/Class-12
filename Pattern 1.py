@@ -4,7 +4,9 @@ UDF to print following pattern using N.
 A#1
 C*A*3
 E#C#A#5
-G*E*C*A*7'''
+G*E*C*A*7
+
+'''
 
 def pattern(n):
     num=1
