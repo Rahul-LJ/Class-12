@@ -10,8 +10,9 @@ text file:
 open('<filename>') - basically opens the given file name
                      (default opens in read mode)
 <filename>.close() - breaks the connection between fileobject and file
+<filename>.read(n) - reads till n bytes (if not specified, reads all)
 
-     3 modes
+     3 modes        #open('<filename>','mode')
   _____________
  |      |      |
 read  write  append
