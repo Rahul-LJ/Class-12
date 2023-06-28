@@ -1,0 +1,34 @@
+'''
+functions: set of statements that already exists in the code,
+           call it when needed rather than typing those statements everytime.
+
+           Types of functions
+                  |
+       ______________________________
+      |           |                  |
+Built in func   Modules   User Defined func
+
+
+built-in    : functions already existing
+
+modules     : functions that have to be imported
+            _______________________________
+            | import <module name>        |
+            | <modulename>.functionName() |
+            |_____________________________|
+                        or
+            _______________________________________
+            | from <module> import <functionName> |
+            | functionName()                      |
+            |_____________________________________|
+ 
+user defined: functions defined by the user
+            ______________________________
+            | def <funcName>(parameter): |   <--function header, parameter is optional
+            |   statement                |
+            |   statements               |
+            |   return <variable>        |   <--return is optional
+            |____________________________|
+
+Parameters: values used in the function header
+Arguments : values used in the function call (Actual Parameter)
