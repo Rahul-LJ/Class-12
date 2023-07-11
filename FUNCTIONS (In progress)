@@ -33,4 +33,21 @@ user defined: functions defined by the user
 Parameters: values used in the function header
 Arguments : values used in the function call (Actual Parameter)
 return    : to return value from the function (statments after return in func definition is not executed)
+
+
+Positional arg: [in func def] arguments that depend on position alone, i.e. they are just variable with no specific value ( eg: def func(a,b) )
+Default arg   : [in func def] arguments that have values assigned to them, values are assigned RIGHT TO LEFT ( eg: def func(a,b,c=10) )
+keyword arg   : [in func call] assigning arguments when ur calling the function ( eg: func(a=10,b=20) )
+
+LOCAL value is a temprory value within a function, meaning a given variable in a func definition is not defined for the entire code, rather within the definition only.
+Global is the value accessable in the entire code and can be updated.
+
+~how to use global
+
+def func():              |    def func():
+    z=5                  |        global z
+func()                   |        z=5
+print(z)                 |    func()    
+                         |    print(z)
+# 'z' is not defined     |    # 5                 
 '''
