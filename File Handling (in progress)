@@ -59,4 +59,16 @@ ________________________________________________________________________
                                               1 - current position
                                               2 - end of the file
 
+try     - gets executed runs the code
+except  - gets executed only if there IS an error in try, else this condition is skipped
+else    - gets excepted if theres NO error, if theres error this condition is skipped
+finally - always gets excecuted
+
+!! for binary u need to IMPORT pickle to read or write
+rb wb rb+ wb+ ab ab+
+writing in binary - pickle.dump( <structure list/dict> , fileobject )
+reading in binary - pickle.load( file object )
+
+PICKLING conveting structure to byte stream - output mode - writing
+UNPICKLING converting byte stream to original structure - input - reading
 '''
