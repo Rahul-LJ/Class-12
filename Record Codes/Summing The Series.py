@@ -13,7 +13,7 @@ def power(n,p):
     return n**p
 
 while True:
-    m=int(input('''x - x3 + x5 - x7 + ...
+    m=int(input('''\nx - x3 + x5 - x7 + ...
 --  --   --   --
 2!  4!   6!   8!
 
