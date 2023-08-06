@@ -1,4 +1,5 @@
 def binsearch(x,l):
+    l.sort()
     low,high = 0,len(l)-1
     while low <= high:
         middle = (low+high) // 2
