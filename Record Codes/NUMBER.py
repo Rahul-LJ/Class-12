@@ -1,3 +1,4 @@
+#THIS IS THE FIRST PART OF 9th code
 '''USER DEFINED MODULE – 1
 AIM: To create an user defined module NUMBER to include 2 user defined functions
 PALINDROME(), SPECIAL() and import this module in another python code and execute the
@@ -19,7 +20,8 @@ i) palindrome() to take as parameter a number and returns 1 if the number is a p
 ii) special() – takes as parameter a number and returns 1 if it’s a special number and -1
 otherwise. [ A special number is a number equal to the sum of the factorial of the individual
 digits of the number] This function to be tested to generate list of special numbers between
-two limits accepted from the user.'''
+two limits accepted from the user.
+'''
 
 def palindrome(n):
     NUM,num = n,0
