@@ -1,14 +1,3 @@
-'''To perform the menu options on a tuple of values read as input.
-METHODOLOGY: The menu options are displayed. As per the user’s choice, within each of the
-menu options, a tuple is read as input and the appropriate functions are called. The first
-menu option, reads a tuple of ‘n’ words, calls a function that takes the tuple as parameter
-which checks if each word has all the 5 vowels in any case and returns a tuple of such words.
-The second menu option reads a nested tuple having height, weight of ‘n’ persons, calls a
-function that takes as parameter, each element of the nested tuple, which calculates the BMI
-and returns both the BMI and the result as OBESE /OVERWEIGHT/NORMAL/UNDERWEIGHT.
-The returned values are displayed in the main function for each person.'''
-
-
 def vowel(t):
     for words in t:
         c=0
