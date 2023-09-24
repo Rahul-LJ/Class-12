@@ -20,7 +20,7 @@ while True:
         n=int(input('Enter number of elements in the list: '))
         l=[]
         for i in range(1,n+1):
-            l.append(int(input('Enter element '+str(i))))
+            l.append(int(input('Enter element '+str(i)+' : ')))
         x=int(input('Enter the number to be searched: '))
         if binsearch(x,l) != -1:
             print(x,' is found in the list at ',binsearch(x,l))
