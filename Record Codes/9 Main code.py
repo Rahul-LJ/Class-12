@@ -2,8 +2,8 @@ import NUMBER
 
 t=()
 c=0
-for i in range(1,int(input('Enter Number of numbers:'))+1):
-    t+=(int(input('Enter number'+str(i))),)
+for i in range(1,int(input('Enter Number of numbers: '))+1):
+    t+=(int(input('Enter number '+str(i)+' : ')),)
 paltuple = ()
 for i in t:
     if NUMBER.palindrome(i) == 1:
@@ -16,8 +16,8 @@ if c == 1:
 else:
     print('None of the elements are palindrome.')
 c=0
-l = int(input('Enter lower limit:'))
-u = int(input('Enter upper limit:'))
+l = int(input('Enter lower limit: '))
+u = int(input('Enter upper limit: '))
 splL = []
 for i in range(l,u+1):
     if NUMBER.special(i) == 1:
