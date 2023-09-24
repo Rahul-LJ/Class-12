@@ -24,5 +24,5 @@ def mode(l):
 n=int(input('Enter number of elements in the list: '))
 l=[]
 for i in range(n):
-    l.append(int(input('Element '+str(i+1))))
+    l.append(int(input('Element '+str(i+1)+': ')))
 print('Mean: ',mean(l),'\nMedian: ',median(l),'\nMode: ',mode(l))
