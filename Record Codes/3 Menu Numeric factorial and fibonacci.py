@@ -11,7 +11,7 @@ def fib(n):
         a,b=b,a+b
 
 while True:
-    m=int(input("1 Factorial of a number \n2 Generate 'N' Fibonacci series \nExit \nChoose your option: "))
+    m=int(input("1) Factorial of a number \n2) Generate 'N' Fibonacci series \n3) Exit \nChoose your option: "))
     if m==1:
         n=int(input('Enter number to find its factorial: '))
         print(n,'! is ',fac(n))
