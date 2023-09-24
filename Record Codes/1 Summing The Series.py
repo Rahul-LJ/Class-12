@@ -1,46 +1,46 @@
-'''
-x - x3 + x5 - x7 + ...
---  --   --   --
-2!  4!   6!   8!
-'''
-def factorial(n):
+def fac(n):
     f=1
     for i in range(1,n+1):
         f*=i
     return f
 
-def power(n,p):
-    return n**p
-
 while True:
-    m=int(input('''\nx - x3 + x5 - x7 + ...
---  --   --   --
-2!  4!   6!   8!
+    m = int(input('''Compute the sum of the following series:
+i) x^1 - x^3 + x^5 - x^7 + ... 'n' terms
+   ___   ___   ___   ___
+    2!    4!    6!    8!
 
+ii) x^1 - x^3 + x^5 - x^7 + ... 'n' terms
+   ___   ___   ___   ___
+    3!    5!    7!    9!
 
-x - x3 + x5 - x7 + ...
---  --   --   --
-3!  5!   7!   9!
-
-Exit
-Choose your option : '''))
-    if m==1:
-        x=int(input('Enter value of x: '))
-        n=int(input('Enter value of n: '))
-        s,p=0,1
+Choose your option 1 or 2 (3 to quit): '''))
+    if m == 1:
+        t,sign = 0,1
+        power = 1
+        den = 2
+        n = int(input('Enter number of terms : '))
+        x = int(input('Enter value of x : '))
         for i in range(n):
-            s+= (power(x,p))/factorial(p+1)
-        print('The sum of first type of series is ',s)
-        continue
+            t += (x^power)/fac(den)
+            power += 2
+            den += 2
+            sign *= -1
+        print('The sum is',t)
 
-    if m==2:
-        x=int(input('Enter value of x: '))
-        n=int(input('Enter value of n: '))
-        s,p=0,1
+    if m == 2:
+        t,sign = 0,1
+        power = 1
+        den = 3
+        n = int(input('Enter number of terms : '))
+        x = int(input('Enter value of x : '))
         for i in range(n):
-            s+= (power(x,p))/factorial(p+2)
-        print('The sum of second type of series is ',s)
-        continue
+            t += (x^power)/fac(den)
+            power += 2
+            den += 2
+            sign *= -1
+        print('The sum is',t)
 
-    if m==3:
+    if m == 3:
+        print('Code ended successfully ;)')
         break
