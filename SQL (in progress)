@@ -79,9 +79,9 @@ Changing data type of a column
 
 
 Assigning Value for entire with condition
- ____________________________________________________
-|UPDATE tbname SET column = condition WHERE column>=5;|
-|_____________________________________________________|
+ _______________________________________________________
+|UPDATE tbname SET column = condition WHERE column>=5;  |
+|_______________________________________________________|
 eg: UPDATE Games SET Price=1000 where Price>600;
     UPDATE Games SET Name=Unkown where Name IS NULL;
 _________________________________________________________________________
@@ -95,8 +95,8 @@ returns table * for all and names of req columns seperated with ','
 _________________________________________________________________________
 ~Delete a Specific record
 
- _____________________________________________________________________
-|DELETE FROM tbname WHERE column=<value of column that u wanna delete>|
-|_____________________________________________________________________|
+ _______________________________________________________________________
+|DELETE FROM tbname WHERE column=<value of column that u wanna delete>  |
+|_______________________________________________________________________|
 eg: DELETE FROM Games WHERE ID=3;
 _________________________________________________________________________
