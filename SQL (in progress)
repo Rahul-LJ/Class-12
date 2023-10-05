@@ -12,15 +12,18 @@ Creating a database
 rule for naming the is same as in python
 lines in SQL ALWAYS end with a semicolon ';'
 
-
 now, you have to let SQL know which db your working on
 so, the syntax is must before working in it
  __________________________
 |USE dbname;               |
 |__________________________|
+
+Some Basic Keywords:
+
+SHOW <database or tables> - returns a table list of databases/tables
+DESCRIBE <tbname>         - it returns your field's data type,extra as a table
 _________________________________________________________________________
 Creating a Table with Headings
-
  __________________________________________________
 |CREATE TABLE tbname(column1 type,column2 type);   |
 |__________________________________________________|
@@ -36,8 +39,7 @@ type - defines what type the column is
       PRIMARY KEY    - unique number for each row
       AUTO_INCREMENT - auto assigns number from 1,2,..
 _________________________________________________________________________
-Adding Records, i.e. values
-
+~Adding Records, i.e. values
  ____________________________________________________________
 |INSERT INTO tbname(column1,column2) values(value1,value2);  |
 |____________________________________________________________|
@@ -45,7 +47,7 @@ Adding Records, i.e. values
 eg: INSERT INTO Games(ID,Name) values(1,'Asphalt 9');
 number of columns here must be equal to the values ur assigning
 _________________________________________________________________________
-Modifications
+~Modifications
 
 Adding a new column
  _________________________________________
@@ -74,12 +76,27 @@ Changing data type of a column
  ________________________________________
 |ALTER TABLE tbname MODIFY column type;  |
 |________________________________________|
+
+
+Assigning Value for entire with condition
+ ____________________________________________________
+|UPDATE tbname SET column = condition WHERE column>=5;|
+|_____________________________________________________|
+eg: UPDATE Games SET Price=1000 where Price>600;
+    UPDATE Games SET Name=Unkown where Name IS NULL;
 _________________________________________________________________________
-Viewing Table
+~Viewing Table
  ______________________________
 |SELECT * FROM tbname;         |
 |______________________________|
 eg: SELECT * FROM Games;
     SELECT Name,Price FROM Games;
 returns table * for all and names of req columns seperated with ','
+_________________________________________________________________________
+~Delete a Specific record
 
+ _____________________________________________________________________
+|DELETE FROM tbname WHERE column=<value of column that u wanna delete>|
+|_____________________________________________________________________|
+eg: DELETE FROM Games WHERE ID=3;
+_________________________________________________________________________
