@@ -10,7 +10,7 @@ Creating a database
 |__________________________|
 
 rule for naming the is same as in python
-lines in SQL ALWAYS end with a semicolon
+lines in SQL ALWAYS end with a semicolon ';'
 
 
 now, you have to let SQL know which db your working on
@@ -25,9 +25,11 @@ Creating a Table with Headings
 |CREATE TABLE tbname(column1 type,column2 type);   |
 |__________________________________________________|
 
+eg: CREATE TABLE Games(ID INT,Name VARCHAR(20);
 type - defines what type the column is
        some are:
       INT            - values in this column are integers
+      FLOAT          - values in this column are decimal nubmers
       TEXT           - values in this column are large strings
       VARCHAR(x)     - strings with max length x (x can be 1 to 255)
       NOT NULL       - the column cannot be empty
@@ -40,30 +42,44 @@ Adding Records, i.e. values
 |INSERT INTO tbname(column1,column2) values(value1,value2);  |
 |____________________________________________________________|
 
+eg: INSERT INTO Games(ID,Name) values(1,'Asphalt 9');
 number of columns here must be equal to the values ur assigning
 _________________________________________________________________________
 Modifications
 
 Adding a new column
- ______________________________
-|ALTER TABLE tbname ADD type;  |
-|______________________________|
+ _________________________________________
+|ALTER TABLE tbname ADD columnName type;  |
+|_________________________________________|
+eg: ALTER TABLE Games ADD Cost INT;
+
+
+Adding value for Specific column
+ ______________________________________________________________________________________
+|UPDATE tbname SET column = value WHERE <other column name> = <value of that column>;  |
+|______________________________________________________________________________________|
+eg: UPDATE Games SET Cost=100 WHERE Name='Asphalt 9'
+you can have multiple such with a ','
+column1=value1,column2=value2
 
 
 Renaming a column
- ______________________________
+ _________________________________________________
 |ALTER TABLE tbname CHANGE oldname newname type;  |
-|______________________________|
+|_________________________________________________|
+eg: ALTER TABLE Games CHANGE Cost Price FLOAT;
 
- ______________________________
-|ALTER TABLE tbname ADD type;  |
-|______________________________|
 
+Changing data type of a column
+ ________________________________________
+|ALTER TABLE tbname MODIFY column type;  |
+|________________________________________|
+_________________________________________________________________________
+Viewing Table
  ______________________________
-|ALTER TABLE tbname ADD type;  |
+|SELECT * FROM tbname;         |
 |______________________________|
-
- ______________________________
-|ALTER TABLE tbname ADD type;  |
-|______________________________|
+eg: SELECT * FROM Games;
+    SELECT Name,Price FROM Games;
+returns table * for all and names of req columns seperated with ','
 
