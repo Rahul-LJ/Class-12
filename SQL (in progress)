@@ -29,8 +29,8 @@ Creating a Table with Headings
 |__________________________________________________|
 
 eg: CREATE TABLE Games(ID INT,Name VARCHAR(20);
-type - defines what type the column is
-       some are:
+type - defines what type the column is, like:
+
       INT            - values in this column are integers
       FLOAT          - values in this column are decimal nubmers
       TEXT           - values in this column are large strings
