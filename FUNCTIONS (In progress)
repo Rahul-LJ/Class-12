@@ -30,9 +30,10 @@ user defined: functions defined by the user
             |   return <variable>        |   <--return is optional
             |____________________________|
 
-Parameters: values used in the function header
-Arguments : values used in the function call (Actual Parameter)
-return    : to return value from the function (statments after return in func definition is not executed)
+Both Parameter and Argument are SAME but
+Formal para/arg : values used in the function header
+Actual para/arg : values used in the function call
+return          : to return value from the function (statments after return in func definition is not executed)
 
 
 Positional arg: [in func def] arguments that depend on position alone, i.e. they are just variable with no specific value ( eg: def func(a,b) )
