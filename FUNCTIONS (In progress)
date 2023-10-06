@@ -38,7 +38,7 @@ return          : to return value from the function (statments after return in f
 
 Positional arg: [in func def] arguments that depend on position alone, i.e. they are just variable with no specific value ( eg: def func(a,b) )
 Default arg   : [in func def] arguments that have values assigned to them, values are assigned RIGHT TO LEFT ( eg: def func(a,b,c=10) )
-keyword arg   : [in func call] assigning arguments when ur calling the function ( eg: func(a=10,b=20) )
+keyword arg   : [in func call] assigning arguments when ur calling the function with SAME variable as in func def ( eg: func(b=10,a=20) )
 
 LOCAL value is a temprory value within a function, meaning a given variable in a func definition is not defined for the entire code, rather within the definition only.
 Global is the value accessable in the entire code and can be updated.
