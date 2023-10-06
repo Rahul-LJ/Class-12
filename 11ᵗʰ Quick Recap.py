@@ -47,6 +47,7 @@ count      - x.count('')              counts the given character
 find       - x.find('',start)         prints the index value of the chr
 split      - x.split('')              splits the string wherever the chr appears
 partition  - x.partition('')          splits 3 parts, 1)before 2)the chr 3)after
+strip      - x.strip()                removes whitespace(default)/character in the start and end
 replace    - x.replace(old,new,count) replaces the old string with new given times
 ______________________________________________________________________________
 list function
