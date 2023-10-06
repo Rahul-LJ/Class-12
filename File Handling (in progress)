@@ -71,4 +71,9 @@ reading in binary - pickle.load( file object )
 
 PICKLING conveting structure to byte stream - output mode - writing
 UNPICKLING converting byte stream to original structure - input - reading
+
+DIRECTORY (file location)
+Absolute - topmost level of the directory structure (eg: C:\ )
+Relative - the relative path your currently working directory (eg: ......\12code)
+Parent   - the upper directory of your relative (eg: ....\DESKOP\12code)
 '''
