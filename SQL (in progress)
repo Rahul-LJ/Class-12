@@ -1,6 +1,6 @@
 SQL ? 
 A database to store data as table, which are easy to access.
-open mySQL 8.0 by entering your password.
+-open mySQL 8.0 by entering your password.
 
 words in CAPS are keywords and varibles in small are variables for understanding ;)
 _________________________________________________________________________
@@ -9,11 +9,11 @@ Creating a database
 |CREATE DATABASE dbname;   |
 |__________________________|
 
-rule for naming the is same as in python
-lines in SQL ALWAYS end with a semicolon ';'
+-rule for naming the is same as in python
+-lines in SQL ALWAYS end with a semicolon ';'
 
-now, you have to let SQL know which db your working on
-so, the syntax is must before working in it
+-now, you have to let SQL know which db your working on
+ so, the syntax is must before working in it
  __________________________
 |USE dbname;               |
 |__________________________|
@@ -45,7 +45,9 @@ _________________________________________________________________________
 |____________________________________________________________|
 
 eg: INSERT INTO Games(ID,Name) values(1,'Asphalt 9');
-number of columns here must be equal to the values ur assigning
+-number of columns here must be equal to the values ur assigning
+-for MULTIPLE records, seperate records with comma like 
+eg: INSERT INTO Games(ID,Name) values(1,'one'),(2,'two'),(3,'three')
 _________________________________________________________________________
 ~Modifications
 
@@ -61,8 +63,8 @@ Adding value for Specific column
 |UPDATE tbname SET column = value WHERE <other column name> = <value of that column>;  |
 |______________________________________________________________________________________|
 eg: UPDATE Games SET Cost=100 WHERE Name='Asphalt 9'
-you can have multiple such with a ','
-column1=value1,column2=value2
+-you can have multiple such with a ','
+UPDATE Games SET column1=value1,column2=value2 WHERE Name='Asphalt 9'
 
 
 Renaming a column
@@ -99,4 +101,5 @@ _________________________________________________________________________
 |DELETE FROM tbname WHERE column=<value of column that u wanna delete>  |
 |_______________________________________________________________________|
 eg: DELETE FROM Games WHERE ID=3;
+
 _________________________________________________________________________
