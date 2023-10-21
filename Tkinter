@@ -1,0 +1,8 @@
+Graphical User Interface
+
+Built-in-functions:
+
+Tk()                         - create a window
+<>.geometry('800x500')         - dimension of the window
+<>.title('GUI APP')
+Label( <window> , <text> )   - show text or shapes
