@@ -60,7 +60,7 @@ eg: ALTER TABLE Games ADD Cost INT;
 
 Adding value for Specific column
  ______________________________________________________________________________________
-|UPDATE tbname SET column = value WHERE <other column name> = <value of that column>;  |
+|UPDATE tbname SET <column> = <value> WHERE <other column name> = <value of that column>;  |
 |______________________________________________________________________________________|
 eg: UPDATE Games SET Cost=100 WHERE Name='Asphalt 9'
 -you can have multiple such with a ','
