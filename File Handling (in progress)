@@ -18,9 +18,10 @@ _______________________________________________________________________
 
 FILE OPERATION --> open file -> read file -> write file -> close file
 
-open('<filename>') - basically opens the given file name
-                     (default opens in read mode)
-<filename>.close() - breaks the connection between fileobject and file
+open('<filename>')   - basically opens the given file name
+                       (default opens in read mode)
+<fileobject>.close() - breaks the connection between fileobject and file
+                       necessory if file opened without using 'with' function
 ________________________________________________________________________
 
      3 modes              file_object = open('<filename>','mode')
