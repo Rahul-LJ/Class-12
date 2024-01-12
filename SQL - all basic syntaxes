@@ -59,9 +59,9 @@ eg: ALTER TABLE Games ADD Cost INT;
 
 
 Adding value for Specific column
- ______________________________________________________________________________________
+ __________________________________________________________________________________________
 |UPDATE tbname SET <column> = <value> WHERE <other column name> = <value of that column>;  |
-|______________________________________________________________________________________|
+|__________________________________________________________________________________________|
 eg: UPDATE Games SET Cost=100 WHERE Name='Asphalt 9'
 -you can have multiple such with a ','
 UPDATE Games SET column1=value1,column2=value2 WHERE Name='Asphalt 9'
@@ -82,26 +82,58 @@ Changing data type of a column
 
 Assigning Value for entire with condition
  _______________________________________________________
-|UPDATE tbname SET column = condition WHERE column>=5;  |
+| UPDATE tbname SET column = condition WHERE column>=5; |
 |_______________________________________________________|
 eg: UPDATE Games SET Price=1000 where Price>600;
     UPDATE Games SET Name=Unkown where Name IS NULL;
 _________________________________________________________________________
+
 ~Viewing Table
  ______________________________
-|SELECT * FROM tbname;         |
+| SELECT * FROM tbname;        |
 |______________________________|
 eg: SELECT * FROM Games;
     SELECT Name,Price FROM Games;
 returns table * for all and names of req columns seperated with ','
-_________________________________________________________________________
-~Delete a Specific record
 
+-Union Table
+ ___________________________________________________________________________
+| SELECT <column name> FROM tbname UNION SELECT <column name> FROM tbname2; |
+|___________________________________________________________________________|
+
+-Intersection Table
+ ______________________________________________________________________
+| SELECT tbname.column, tbname2.column FROM tbname INNER JOIN tbname2; |
+|______________________________________________________________________|
+
+-Cartisian Table (cross join)
+ ______________________________________________________________________
+| SELECT tbname.column, tbname2.column FROM tbname CROSS JOIN tbname2; |
+|______________________________________________________________________|
+
+-Equi-Join Table
+ ___________________________________________________________________
+| SELECT * FROM tbname,tbname2 WHERE tbname.column=tbname2.column;  |
+|___________________________________________________________________|
+
+
+______________________________________________________________________________
+
+~Delete a Specific record
  _______________________________________________________________________
 |DELETE FROM tbname WHERE column=<value of column that u wanna delete>  |
 |_______________________________________________________________________|
 eg: DELETE FROM Games WHERE ID=3;
 
+-Deleting a column
+ _______________________________________________
+| ALTER TABLE tbname DROP COLUMN <columnname>;  |
+|_______________________________________________|
+
+-Deleting a table
+ _____________________
+| DROP TABLE tbname;  |
+|_____________________|
 _________________________________________________________________________
 
 
