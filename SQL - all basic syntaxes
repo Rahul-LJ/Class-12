@@ -137,14 +137,7 @@ eg: DELETE FROM Games WHERE ID=3;
 _________________________________________________________________________
 
 
-
-
-
-
-
-
-
-this ones unnecessory
+to get sum of a field/attribute
 table name: Marks
 +---+-----+------+
 |no | sub | mark |
