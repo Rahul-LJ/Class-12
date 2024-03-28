@@ -77,4 +77,20 @@ DIRECTORY (file location)
 Absolute - topmost level of the directory structure (eg: C:\ )
 Relative - the relative path your currently working directory (eg: ......\12code)
 Parent   - the upper directory of your relative (eg: ....\DESKOP\12code)
+
+Exception Errors
+
+NameError          - calling a variable/function before defining it
+TypeError          - operating with wrong data type (eg: str + int)
+ZeroDivisionError  - when you try to divide with zero
+ValueError         - when you try defining the wrong data type (eg: int(str))
+KeyError           - when the loop ends in a dictionary
+AttributeError     - trying to run .<function>() when the <function> does not exist
+IndentationError   - indentation error
+IOError            - when the file doesn't exist
+IndexError         - when the loop ends in a list
+EOFError           - when the loop ends in a file
+SyntaxError        - error in code's grammar (eg: print('hi'  ) 
+RuntimeError       - when the loop loops forever
+
 '''
