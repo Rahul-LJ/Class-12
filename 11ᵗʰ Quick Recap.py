@@ -9,7 +9,8 @@ priority for operators
 __________________________________________________
 |            ()             |         bracket     |
 |            **             |        exponents    |
-|         * / // %          |      multi and divi |    the ones is same level, should be done
+|         * / // %          |      multi and divi |
+|            +,-            |      add and sub    |  the ones is same level, should be done
 | < > <= >= != == is is not |      comparisions   |       left to right in the sum
 |             not           |       boolean not   |
 |             and           |       boolean and   |
