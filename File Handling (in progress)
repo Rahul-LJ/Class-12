@@ -1,9 +1,9 @@
 #FILE HANDLING
 '''
-   2 types of file
-     ___________
-    |           |
-text file    binary file
+        3 types of file
+     ___________________________
+    |           |               |
+text file    binary file     csv file
 
 text file: -Stores data in ascii characters.
            -have EOL (end of line) terminating character '/n'
@@ -13,16 +13,13 @@ text file: -Stores data in ascii characters.
 Binary file: -Stores data in binary characters.
              -No delimiter for a new line
              -faster in excecution
-             -.bin .jpeg .exe
+             -.bin .jpeg .exe .dat
+
+csv file: -Stores in ascii characters, values seperated with delimiter such as  , : ; \t |
+          -have EOL (end of line) terminating character '/n'
+          -Somewhat smaller in size than text file
+          -.csv
 _______________________________________________________________________
-
-FILE OPERATION --> open file -> read file -> write file -> close file
-
-open('<filename>')   - basically opens the given file name
-                       (default opens in read mode)
-<fileobject>.close() - breaks the connection between fileobject and file
-                       necessory if file opened without using 'with' function
-________________________________________________________________________
 
      3 modes              file_object = open('<filename>','mode')
   _____________
@@ -32,16 +29,25 @@ read  write  append
 read only (r)       is used to read from existing txt file
 write only (w)      is used to Create a file by adding string (if file alr exist, it OVERWRITES)
 append only (a)     same as write to add data but if file alr exist, it creates a new file
-read and write (r+) when you want to first read then write
+read and write (r+) when you want to read first then APPEND data
 write and read (w+) when you want to first write (overwrite) then read it
 ________________________________________________________________________
 
+FILE OPERATION --> open file -> read file -> write file -> close file
+
+<fileobject> = open('<filename>','<mode>')           - basically opens the given file name
+                                                       (default opens in read mode)
+<fileobject> = open('<filename>','<mode>',<newline>) - opens the given file name for csv
+
+<fileobject>.close()                                 - breaks the connection between fileobject and file
+                                                       (necessory if file opened without using 'with' function)
+________________________________________________________________________
 #remember these func moves the pointer!
-<file_object>.read(n)     - reads the entire file if no argument (reads till n bytes)
+<file_object>.read()      - reads the entire file if no argument (reads till n bytes)
 
 <file_object>.readline()  - reads till EOL if no argument (reads till n bytes)
 
-<file_object>.readlines() - reads entire file if no argument in a LIST (reads n lines)
+<file_object>.readlines() - reads entire file if no argument in a LIST (reads lines containing n bytes)
 
 <file_object>.write()     - to add data to a file
                             if file alr exists, it'll overwrite (deletes the old, and writes the new)
