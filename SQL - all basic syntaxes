@@ -20,7 +20,7 @@ Creating a database
 
 Some Basic Keywords:
 
-SHOW <database or tables> - returns a table list of databases/tables
+SHOW databases/tables     - returns a table list of databases/tables
 DESCRIBE <tbname>         - it returns your field's data type,extra as a table
 _________________________________________________________________________
 Creating a Table with Headings
@@ -34,7 +34,8 @@ type - defines what type the column is, like:
       INT            - values in this column are integers
       FLOAT          - values in this column are decimal nubmers
       TEXT           - values in this column are large strings
-      VARCHAR(x)     - strings with max length x (x can be 1 to 255)
+      CHAR(x)        - strings with max length x (argument optional as by default its 1)
+      VARCHAR(x)     - strings with max length x (x is mandatory argument and can be 1 to 255)
       NOT NULL       - the column cannot be empty
       PRIMARY KEY    - unique number for each row
       AUTO_INCREMENT - auto assigns number from 1,2,..
@@ -57,6 +58,10 @@ Adding a new column
 |_________________________________________|
 eg: ALTER TABLE Games ADD Cost INT;
 
+Adding a primary key
+ ___________________________________________________
+|ALTER TABLE tbname ADD PRIMARY KEY(<column name>); |
+|___________________________________________________|
 
 Adding value for Specific column
  __________________________________________________________________________________________
@@ -125,9 +130,15 @@ ______________________________________________________________________________
 |_______________________________________________________________________|
 eg: DELETE FROM Games WHERE ID=3;
 
+
+-Deleting a primary key
+ ___________________________________________________
+|ALTER TABLE tbname DROP PRIMARY KEY;               |
+|___________________________________________________|
+
 -Deleting a column
  _______________________________________________
-| ALTER TABLE tbname DROP COLUMN <columnname>;  |
+| ALTER TABLE tbname DROP <columnname>;         |
 |_______________________________________________|
 
 -Deleting a table
@@ -148,3 +159,30 @@ table name: Marks
 
 to add a+b
 SELECT SUM(mark) as total from Marks;
+_________________________________________________________________________
+
+Relational operations are similar to python except:
+not equal to - <>
+and          - &&
+or           - ||
+not          - !
+_________________________________________________________________________
+
+Aliasing - when you want to name a column during its output
+           eg: say you wanna name sum(column) as 'price'
+           syntax: SELECT <column> as 'price' FROM tbname;
+
+Distinct - when you dont want duplicate values of a field/column
+           syntax: SELECT DISTINCT <column> FROM tbname;
+
+wild characters - they are special characters used where condition for strings
+                  _  - 1 character
+                  %  - n characters
+
+                  eg: say you need values starting with 'R' then
+                  sytanx: SELECT * from tbname WHERE column LIKE 'R%';
+
+                  eg: say you need 3 letters word ending with 'a' then
+                  syntax: SELECT * FROM tbname WHERE column LIKE '__a';
+_________________________________________________________________________
+
