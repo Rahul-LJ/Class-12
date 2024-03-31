@@ -53,6 +53,6 @@ print(z)                 |    func()
 # 'z' is not defined     |    # 5                 
 
 
-call by value     - changes in the func affects the global variable that are mutable (list,dictionary)
-call by reference - changes in the func DOES NOT affect the global variable that are immutable (string, int, float, tuple)
+call by reference - changes in the func affects the global variable that are mutable (list,dictionary)
+call by value     - changes in the func DOES NOT affect the global variable that are immutable (string, int, float, tuple)
 '''
