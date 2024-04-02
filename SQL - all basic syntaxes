@@ -122,6 +122,10 @@ returns table * for all and names of req columns seperated with ','
 | SELECT * FROM tbname,tbname2 WHERE tbname.column=tbname2.column;  |
 |___________________________________________________________________|
 
+-Foreign key join
+ ________________________________________________________
+| SELECT * from tbname t join tbname2 t2 on t.id=t2.id;  |
+|________________________________________________________|
 
 ______________________________________________________________________________
 
