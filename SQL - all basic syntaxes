@@ -114,7 +114,7 @@ returns table * for all and names of req columns seperated with ','
 
 -Cartisian Table (cross join)
  ______________________________________________________________________
-| SELECT tbname.column, tbname2.column FROM tbname CROSS JOIN tbname2; |
+| SELECT tbname.column, tbname2.column FROM tbname,tbname2;            |
 |______________________________________________________________________|
 
 -Equi-Join Table
