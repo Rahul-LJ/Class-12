@@ -1,1 +1,6 @@
-weeeeeee
+'''
+import re
+
+The pattern is always in string format
+re.findall(<pattern>, string)
+re.
