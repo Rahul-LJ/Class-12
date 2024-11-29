@@ -1,0 +1,8 @@
+clc 
+clear all 
+close all 
+syms r z phi rho theta 
+rho=3 
+x= rho*sin(phi)*cos(theta), y = rho*sin(phi)*sin(theta), 
+z= rho*cos(phi) ; 
+fsurf(x,y,z, [0 pi/2  0 2*pi], 'g', 'MeshDensity', 20);
