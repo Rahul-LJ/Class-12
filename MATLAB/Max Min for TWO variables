@@ -1,0 +1,106 @@
+clc 
+clear all 
+close all 
+format compact 
+syms x y real 
+f =input('Enter the function f(x,y): '); 
+fx = diff(f,x) 
+fy = diff(f,y) 
+[ax ay] = solve(fx,fy) 
+fxx = diff(fx,x) 
+D = fxx*diff(fy,y) - diff(fx,y)^2 
+r=1; 
+for k=1:1:size(ax) 
+if ((imag(ax(k))==0)&&(imag(ay(k))==0)) 
+ptx(r)=ax(k); 
+pty(r)=ay(k); 
+r=r+1; 
+end 
+end 
+a1=max(double(ax)) 
+a2=min(double(ax)) 
+b1=max(double(ay)) 
+b2=min(double(ay)) 
+ezsurf(f,[a2-.5,a1+.5,b2-.5,b1+.5]) 
+colormap('summer'); 
+shading interp 
+hold on 
+for r1=1:1:(r-1) 
+T1=subs(subs(D,x,ptx(r1)),y,pty(r1)) 
+T2=subs(subs(fxx,x,ptx(r1)),y,pty(r1)) 
+if (double(T1) == 0) 
+sprintf('The point (x,y) is (%d,%d) and need further 
+investigation',double(ptx(r1)),double(pty(r1))) 
+elseif (double(T1) < 0) 
+T3=subs(subs(f,x,ptx(r1)),y,pty(r1)) 
+sprintf('The point (x,y) is (%d,%d) a saddle point', 
+double(ptx(r1)),double(pty(r1))) 
+plot3(double(ptx(r1)),double(pty(r1)),double(T3),'b.','markersize',30); 
+else 
+if (double(T2) < 0) 
+sprintf('The maximum point(x,y) is (%d, %d)', double(ptx(r1)),double(pty(r1))) 
+T3=subs(subs(f,x,ptx(r1)),y,pty(r1)) 
+sprintf('The value of the function is %d', double(T3)) 
+plot3(double(ptx(r1)),double(pty(r1)),double(T3),'r+','markersize',30); 
+else 
+sprintf('The minimum point(x,y) is (%d, %d)', double(ptx(r1)),double(pty(r1))) 
+T3=subs(subs(f,x,ptx(r1)),y,pty(r1)) 
+sprintf('The value of the function is %d', double(T3)) 
+plot3(double(ptx(r1)),double(pty(r1)),double(T3),'m*','markersize',30); 
+end 
+end 
+end 
+COMMAND WINDOW 
+Enter the function f(x,y):  
+2*x^3+x*y^2+5*x^2+y^2 
+fx = 
+6*x^2 + 10*x + y^2 
+fy = 
+2*y + 2*x*y 
+ax = 
+0 -1 -1 -5/3 
+ay = 
+0 -2 
+2 
+0 
+fxx = 
+12*x + 10 
+D = 
+- 4*y^2 + (2*x + 2)*(12*x + 10) 
+a1 = 
+0 
+a2 = -1.6667 
+b1 = 
+2 
+b2 = 
+T1 = 
+20 
+T2 = 
+10 -2 
+ans = 
+'The minimum point(x,y) is (0, 0)' 
+T3 = 
+0 
+ans = 
+'The value of the function is 0' 
+T1 = -16 
+T2 = -2 
+T3 = 
+3 
+ans = 
+'The point (x,y) is (-1,-2) a saddle point' 
+T1 = -16 
+T2 = -2 
+T3 = 
+3 
+ans = 
+'The point (x,y) is (-1,2) a saddle point' 
+T1 = 
+40/3 
+T2 = -10 
+ans = 
+'The maximum point(x,y) is (-1.666667e+00, 0)' 
+T3 = 
+125/27 
+ans = 
+'The value of the function is 4.629630e+00' 
