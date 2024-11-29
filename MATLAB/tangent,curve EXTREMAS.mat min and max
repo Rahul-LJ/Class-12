@@ -1,0 +1,113 @@
+1.	PARAMETRIC PLOTTING
+clc
+clear all
+close all
+t = linspace(0, 2*pi,20);
+x = 3+2*cos(t);
+y = 4+2*sin(t);
+plot(x,y,'k-*')
+axis equal
+xlabel('x(m)')
+ylabel('y(m)')
+title('graph of (x-1)^2+(y-3)^2=4')
+legend('(x-1)^2+(y-3)^2=4')
+
+2.	MULTIPLE PLOTS IN A FIGURE WINDOW (USING COMMAND HOLD ON)
+clc
+clear all
+close all
+x = linspace(0,1)
+plot(x,x.^2,'r*')
+hold on
+plot(x,sin(x),'g.')
+plot(x,exp(x),'m+')
+legend('x^2','sin(x)','exp(x)')
+
+3.	MULTIPLE GRAPHS IN A FIGURE WINDOW BY USING SUBPLOT
+clc
+clear all
+close all
+x=0:0.1:2*pi;
+subplot(2,2,1)
+plot(x,sin(x));
+subplot(2,2,2)
+plot(x,cos(x),'r-*');
+subplot(2,2,3)
+plot(x,exp(-x),'go')
+subplot(2,2,4);
+plot(x,sin(3*x),'ms')
+
+3.	GRAPH OF A CURVE THROUGH EZPLOT COMMAND
+clc
+clear all
+syms x
+f=sin(2*x)+cos(3*x)
+figure(1)
+ezplot(f)
+figure(2)
+ezplot(f,[0,3])
+
+OUTPUT
+f =
+cos(3*x) + sin(2*x)
+
+4.	GRAPH OF A CURVE AND ITS TANGENT LINE IN THE NEIGHBOURHOOD D OF A POINT.
+
+syms x
+%y=input('enter the function f in terms of x:')% Example, Try the function y=x^2-2*x;
+y=x^2-2*x;
+%x1 = input('Enter x value at which tangent  : '); % Example, Try the point x1 =  2
+x1=2;
+D=[x1-2 x1+2]% Region about x1 (or Neighbourhood of x1)
+ezplot(y,D)   % graph of the curve in D 
+hold on
+
+%Equation of the tangent line passing through x1.
+
+yd = diff(y,x); % Differentiation in MATLAB
+slope = subs(yd,x,x1); % Finding the slope at x1
+y1 = subs(y,x,x1);     % Finding the value of the function at the given point
+plot(x1,y1,'ko')       % plot the point
+
+Tgt_line = slope*(x-x1)+y1 % Tangent Line Equation at the given point
+h = ezplot(Tgt_line,D);    % Plotting the Tangent Line
+set(h,'color','r')
+
+5.	EXTREMA OF A SINGLE VARIABLE FUNCTION.
+
+syms x real  
+f= input('Enter the function f(x):'); 
+fx= diff(f,x)  
+c = solve(fx) 
+cmin = min(double(c)); 
+cmax = max(double(c)); 
+ezplot(f,[cmin-2,cmax+2]) 
+hold on 
+fxx= diff(fx,x)   
+for i = 1:1:size(c) 
+    T1 = subs(fxx, x ,c(i) ); 
+    T3= subs(f, x, c(i)); 
+ if (double(T1)==0) 
+    sprintf('The point x is %d inflexion point',double (c(i)))      
+    else             
+         if (double(T1) < 0)       
+    sprintf('The maximum point x is %d', double(c(i))) 
+    sprintf('The value of the function is %d', double (T3))  
+         else 
+    sprintf('The minimum point x is %d', double(c(i))) 
+                sprintf('The value of the function is %d', double (T3)) 
+         end 
+ end 
+plot(double(c(i)), double(T3), 'r*', 'markersize', 15); 
+end 
+pause 
+h=ezplot(fx,[cmin-2,cmax+2]) 
+set(h,'color','r') 
+hold on 
+pause 
+e=ezplot(fxx,[cmin-4,cmax+4]) 
+set(e,'color','g') 
+hold off 
+
+OUTPUT
+Enter the function f(x):x^4
